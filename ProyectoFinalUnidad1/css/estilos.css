@@ -1,0 +1,279 @@
+/*Globales */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700;800&display=swap');
+html{
+    box-sizing: border-box;
+}
+*, *::after, *::before{
+    box-sizing:border-box ;
+}
+
+img{
+    max-width: 100%;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Manrope', sans-serif;
+}
+h1{
+    font-size: 3.8rem;    
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3.0rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+p{
+    color:#5B5B5B;
+    line-height: 2.5rem;
+    text-align: justify;
+
+}
+/*Utilidades */
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.titulo{
+    font-weight: 700;
+    color: #008DA5;
+}
+.titulo::after{
+    content: "";
+    border: 0.1rem solid #008DA5;
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    margin-top:1.5rem;
+}
+.sub-titulo{
+    font-weight: 700;
+    color: #008DA5;
+}
+.sub-titulo::after{
+    content: "";
+    border: 0.1rem solid #008DA5;
+    display: block;
+    width: 40%;
+    margin-top:1.5rem;
+}
+.seccion{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.centrar-texto{
+    text-align: center;
+}
+/*Header */
+.bk-header{
+    background-image: url(../img/imagen1.png);
+    height: 80vh;
+    min-height: 80rem;
+    background-size: cover;
+    background-position:  center center;
+}
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+    align-items: flex-end;
+}
+.cabecera h1{
+    text-align: right;
+    text-transform: uppercase;
+    background-color: #00998A;
+    width: 70rem;
+    color: #ffffff;
+    padding: 2rem 2rem 2rem 1rem;
+
+}
+.navegacion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.1rem solid #ffffff ;
+    height: 8rem ;
+    width: 100%;
+}
+.barra a{
+    margin-right: 3rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+.barra a:last-of-type{
+    margin: 0;
+}
+.barra a:hover{
+    color: rgb(164, 250, 241);
+}
+
+/* seccion fisioterapia */
+.contenido-fisioterapia{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    margin-top: 6rem;
+}
+.info-fisioterapia{
+    background-image: url(../img/imagen5.png);
+    height: 100%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* Footer */
+    .pie-pagina{
+        background-color: #005145;
+        padding-top: 4rem;
+        margin-top: 4rem;
+    }
+    .contenido-footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 3rem;
+    }
+
+    /* Formulario contacto */
+    .seccion1_footer img{
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+
+    }
+    .seccion1_footer p{
+        color: #ffffff;
+    }
+    .seccion1_footer p:last-of-type{
+        font-size: 2rem;
+    }
+    .formulario legend{
+        color: #ffffff;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+        font-weight:300;
+    }
+    .formulario label{
+        display: block;
+        color: #ffffff;    
+    }
+    .formulario input, .formulario textarea{
+        background-color: rgba(0, 0, 0, 0);
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+        border: .2rem solid #ffffff;
+        border-radius: 5px;
+        padding: 1rem;
+        display: inline-block;
+        width: 100%;
+        font-size: 1.6rem;
+        color: #ffffff;
+  
+    }    
+    .formulario textarea{
+        height: 15rem;
+        resize: none;
+    }
+    .formulario input:last-of-type {
+        display: block;
+        width: auto;
+        padding: 1.3rem 4.5rem;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .formulario input:last-of-type:hover{
+        background-color: #00A085;
+        color: #005145;
+    }
+   
+    /**** RESPONSIVE *******/
+
+
+    @media (max-width:768px){
+
+        .contenedor{
+            width: 650px;
+        }
+        .bk-header{
+            height: 50vh;
+            min-height: 40vh;
+        }
+        .cabecera h1{
+            font-size: 2.8rem;
+            width: 60rem;
+        }
+        .img-fisioterapia{
+            grid-column: 1/3;
+            margin: 0 auto;
+            width: 40rem;
+        }
+        .info-fisioterapia{
+            grid-column: 1/3;
+            margin: 0 auto; 
+        }
+        .sub-titulo{
+            text-align: center;
+        }
+        .sub-titulo::after{
+            margin: 0 auto;
+            margin-top:1.5rem;
+        }
+
+        .formulario input, .formulario textarea{
+            margin-bottom: 1.5rem;
+            padding: .6rem;
+            font-size: 1.4rem;
+        }
+        .seccion1_footer img{
+            width: 50%;
+        }
+    }
+
+    @media(max-width:480px){
+        .contenedor{
+            width: 400px;
+        }
+        .bk-header{
+            height: 40vh;
+            min-height: 15vh;
+            background-position: right center;
+        }
+        .cabecera{
+            padding-bottom: 1rem;
+        }
+        .navegacion img{
+            flex-basis: calc(30% - 1rem);
+        }
+        .barra a{
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+        .cabecera h1{
+            font-size: 2.2rem;
+            width: 40rem;
+            margin: 0;
+        }
+        .info-fisioterapia{
+            grid-row:2;            
+        }
+        .img-fisioterapia{
+            width: 25rem;
+        }
+        .seccion1_footer{
+            grid-column: 1/3;
+        }
+        .formulario{
+            grid-column: 1/3;
+            grid-row:1;
+        }     
+
+    }
